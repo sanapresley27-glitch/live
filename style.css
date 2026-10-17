@@ -1,0 +1,199 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #09111f;
+    color: #f4f7fb;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 6%;
+    border-bottom: 1px solid #253047;
+}
+.logo{
+    font-size: 23px;
+    font-weight: 800;
+}
+.logo span{
+    color: #54b5ff;
+}
+.status, .eyebrow{
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #aebbd0;
+}
+.dot{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #42d392;
+    margin: 7px;
+}
+
+.container{
+    max-width: 1250px;
+    padding: 35px 22px;
+    margin: auto;
+}
+
+.intro{
+    margin-bottom: 30px;
+}
+
+.eyebrow{
+    color: #54b5ff;
+}
+
+.intro h1{
+    font-size: clamp(30px, 5vm, 48px);
+    margin: 12px 0;
+}
+
+.intro h1 span{
+    color: #54b5ff;
+}
+.intro p, .conference-info p{
+    color: #aebbd0;
+    line-height: 1.6;
+}
+.layout{
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr)minmax(280px, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+.video-box{
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 14px;
+    overflow: hidden;
+}
+video{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.video-message{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: linear-gradient(135deg, #142944, #080d18);
+}
+.video-message h2{
+    font-size: 20px;
+}
+.video-message p{
+    color: #aebbd0;
+    font-size: 14px;
+}
+.play-icon{
+    color: #54b5ff;
+    font-size: 38px;
+}
+.conference-info, .questions, .chat{
+    background: #111c2d;
+    border: 1px solid #253047;
+    border-radius: 14px;
+    padding: 22px;
+    margin-top: 18px;
+}
+
+.live-label{
+    color: #ff7777;
+    font-size: 12px;
+    font-weight: bold;
+}
+.conference-info h2{
+    font-size: 12px;
+}
+.chat h2, .questions h2{
+    margin-top: 0;
+}
+.chat-subtitle, .demo-note{
+    color: #aebbd0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.messages{
+    height: 300px;
+    overflow-y: auto;
+    padding: 12px 0;
+    border-top: 1px solid #253047;
+    border-bottom: 1px solid #253047;
+    margin: 15px 0;
+}
+.notice{
+    color: #aebbd0;
+    font-size: 13px;
+}
+.messages{
+    overflow-wrap: anywhere;
+    background: #1a2940;
+    border-radius: 9px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.messages strong{
+    margin-bottom: 0;
+}
+input{
+    min-width: 0;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #35435a;
+    border-radius: 8px;
+    background: #09111f;
+    color: white;
+    outline: none;
+}
+input:focus{
+    border-color: #54b5ff;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+button{
+    padding: 12px 18px;
+    background: #1688e8;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background: #0874ca;
+}
+footer{
+    padding: 28px 15px;
+    text-align: center;
+    color: #aebbd0;
+    font-size: 13px;
+}
+@media (max-width:800){
+    .layout{
+    grid-template-columns: 1fr;
+}
+.navbar{
+    padding: 18px;
+}
+.status{
+    font-size: 10px;
+}
+.messages{
+    height: 240px;
+}
+}

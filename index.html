@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>live </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">prier <span>LIVE</span></div>
+        <div class="status">
+            <span class="dot"></span> SALLE DE CONFERENCE
+        </div>
+    </header>
+
+    <Main class="container">
+        <section class="intro">
+            <p class="eyebrow">FORUM PREIER</p>
+            <H1>LA conference <span>en direct.</span></H1>
+            <p>suivrez les echanges et participatipez au débat.</p>
+        </section>
+
+        <div class="layout">
+            <section class="main-content">
+                <div class="video-box">
+                    <video id="liveVideo" controls autoplay playsinline></video>
+                    <div id="video-message">
+                        <div class="play-icom">▶️</div>
+                        <h2>la diffusion commencera ici</h2>
+                        <p>le flux video sera connecté à cette fenetre.</p>
+                    </div>
+                </div>
+
+                <div class="conference-info">
+                   <span class="live-label">• EN DIRECT</span>
+                     <h2>entre intelligence et resilience</h2>
+                     <p>unir tout.</p>
+                </div>
+
+                <section class="questions">
+                    <h2>Poser une question</h2>
+                    <form id="questionForm">
+                        <input id="questionInput"placeholder="ecris ta question"maxlength="500" required>
+                        <button type="submit">envoyer</button>
+                    </form>
+                    <div id="questionList"></div>
+                </section>
+            </section>
+
+            <aside class="chat">
+                <h2>Discussion en direct</h2>
+                <p class="chat-subtlitle">échange avec les autre participants</p>
+
+                <div id="messanges" class="messanges">
+                    <p class="notice">Bienvenue dans la salle de Discussion!</p>
+                </div>
+
+                <form id="chatForm" class="char-form">
+                    <input id="nameInput" placeholder="Ton prenom" maxlength="40" required>
+                    <input id="messageInput"placeholder="ton message..."maxlength="500" required>
+                    <button type="submit">envoyer</button>
+                </form>
+                <p class="demo-note">
+                    prototype: les message sont visibles uniquement dans ce navigateur.
+                </p>
+            </aside>
+        </div>
+    </Main>
+
+    <footer>
+        LIVE: une jeunesse connectée
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
